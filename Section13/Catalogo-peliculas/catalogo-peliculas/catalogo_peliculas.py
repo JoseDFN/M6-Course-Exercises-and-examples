@@ -1,10 +1,11 @@
 import tkinter as tk
-from client.gui_app import Frame
+from client.gui_app import Frame, barra_menu
 def main():
     root = tk.Tk()
     root.title('Catalogo de Peliculas')
-    root.iconbitmap('imgs/catalogo-icon.ico')
-    root.resizable(0,0)
+
+    root.resizable(1,1)
+    barra_menu(root)  # Añadir barra de menú al root
 
     app = Frame (root = root)
 
