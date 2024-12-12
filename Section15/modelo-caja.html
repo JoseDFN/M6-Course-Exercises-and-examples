@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seudo clase</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .menu{
+            background-color: cyan;
+            padding: 10px 0px;
+        }
+
+        .menu-nav{
+            list-style-type: none;
+            padding-left: 5px;
+            margin: 0;
+        }
+
+        .menu-nav__item{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu-nav__item a{
+            color: #ffff;
+            text-decoration: none !important;
+        }
+
+        .menu-nav__item a:hover{
+            color: red;
+        }
+
+        .menu-nav__item a:active{
+            color: blue;
+        }
+
+        .menu-nav__item a::after{
+            content: " | ";
+        }
+
+        main{
+            width: 100%;
+            height: 300px;
+            border: 10px solid grey;
+            padding: 20px 85px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li class="menu-nav__item"><a href="">Inicio</a></li>
+                <li class="menu-nav__item"><a href="">Trabajos/a></li>
+                <li class="menu-nav__item"><a href="">Blog</a></li>
+                <li class="menu-nav__item"><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Hola mundo</h1>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A inventore voluptate hic eligendi quam eaque tenetur ipsum
+                    quis repellendus ullam, modi illum sint, dolorum deserunt repudiandae nostrum rem similique ad.
+                </p>
+            </div>
+            <ul>
+                <li>Item</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
