@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seudo clase</title>
+
+    <style>
+        .menu{
+            background-color: cyan;
+        }
+
+        .menu-nav{
+            list-style-type: none;
+        }
+
+        .menu-nav__item{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu-nav__item a{
+            color: #ffff;
+            text-decoration: none !important;
+        }
+
+        .menu-nav__item a:hover{
+            color: red;
+        }
+
+        .menu-nav__item a:active{
+            color: blue;
+        }
+
+        .menu-nav__item a::after{
+            content: " | ";
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li class="menu-nav__item"><a href="">Inicio</a></li>
+                <li class="menu-nav__item"><a href="">Trabajos/a></li>
+                <li class="menu-nav__item"><a href="">Blog</a></li>
+                <li class="menu-nav__item"><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <ul>
+                <li>Item</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
