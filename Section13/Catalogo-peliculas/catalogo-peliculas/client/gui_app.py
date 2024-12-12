@@ -38,15 +38,18 @@ class Frame(tk.Frame):
         self.label_genero.grid(row=2, column=0, padx = 10, pady = 10)
 
         #entry
-        self.entry_nombre = tk.Entry(self)
+        self.mi_nombre = tk.StringVar()
+        self.entry_nombre = tk.Entry(self, textvariable=self.mi_nombre)
         self.entry_nombre.config(width=50, font = ('Arial', 12))
         self.entry_nombre.grid(row=0, column=1, padx = 10, pady = 10, columnspan=2)
         
-        self.entry_duracion = tk.Entry(self)
+        self.mi_duracion = tk.StringVar()
+        self.entry_duracion = tk.Entry(self, textvariable=self.mi_duracion)
         self.entry_duracion.config(width=50, font = ('Arial', 12))
         self.entry_duracion.grid(row=1, column=1, padx = 10, pady = 10, columnspan=2)
         
-        self.entry_genero = tk.Entry(self)
+        self.mi_genero = tk.StringVar()
+        self.entry_genero = tk.Entry(self, textvariable= self.mi_genero)
         self.entry_genero.config(width=50, font = ('Arial', 12))
         self.entry_genero.grid(row=2, column=1, padx = 10, pady = 10, columnspan=2)
 
@@ -55,7 +58,7 @@ class Frame(tk.Frame):
         self.boton_nuevo.config(font = ('Arial', 12, 'bold'), width = 20, fg = '#DAD5D6', bg = '#158645', cursor = 'hand2', activebackground = '#35bd6f')
         self.boton_nuevo.grid(row=4, column=0, padx = 10, pady = 10)
         
-        self.boton_guardar = tk.Button(self, text='Guardar')
+        self.boton_guardar = tk.Button(self, text='Guardar', command = self.guardar_datos)
         self.boton_guardar.config(font = ('Arial', 12, 'bold'), width = 20, fg = '#DAD5D6', bg = '#1658A2', cursor = 'hand2', activebackground = '#3586df')
         self.boton_guardar.grid(row=4, column=1, padx = 10, pady = 10)
 
@@ -64,6 +67,10 @@ class Frame(tk.Frame):
         self.buton_cancelar.grid(row=4, column=2, padx = 10, pady = 10)
 
     def habilitar_campos(self):
+        self.mi_nombre.set('')
+        self.mi_duracion.set('')
+        self.mi_genero.set('')
+
         self.entry_nombre.config(state = 'normal')
         self.entry_duracion.config(state = 'normal')
         self.entry_genero.config(state = 'normal')
@@ -72,9 +79,16 @@ class Frame(tk.Frame):
         self.buton_cancelar.config(state = 'normal')
 
     def desabilitar_campos(self):
+        self.mi_nombre.set('')
+        self.mi_duracion.set('')
+        self.mi_genero.set('')
+
         self.entry_nombre.config(state = 'disabled')
         self.entry_duracion.config(state = 'disabled')
         self.entry_genero.config(state = 'disabled')
 
         self.boton_guardar.config(state = 'disabled')
         self.buton_cancelar.config(state = 'disabled')
+
+    def guardar_datos(self):
+        self.desabilitar_campos()
