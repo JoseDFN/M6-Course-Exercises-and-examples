@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>uso float</title>
 
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            font-family: Arial;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial;
+      }
 
-        .main{
-            background: green;
-            width: 90%;
-            margin: auto;
-            padding: 10px;
-        }
-        .caja{
-            width: 500px;
-            height: 200px;
-            margin: 20px;
-            overflow: hidden;
-        }
-        .img{
-            float: left;
+      .main {
+        background: green;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+      .caja {
+        width: 500px;
+        height: 200px;
+        margin: 20px;
+        overflow: hidden;
+      }
+      .img {
+        float: left;
+      }
+      .text {
+        float: right;
+      }
+      .articulo {
+        background: blue;
+        width: 500px;
+        margin: auto;
+        padding: 10px;
+      }
 
-        }
-        .text{
-            float: right;
-        }
-        .articulo{
-            background: blue;
-            width: 500px;
-            margin: auto;
-            padding: 10px;
-        }
-
-        .articulo h2{
-            padding: 10px;
-            text-align: center;
-        }
-        .articulo img{
-            float: right;
-        }
+      .articulo h2 {
+        padding: 10px;
+        text-align: center;
+      }
+      .articulo img {
+        float: right;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="main">
-        <div class="caja img">
-            <img src="https://loremflickr.com/g/320/240/paris" height="200">
-        </div>
-        <div class="caja text">
-            <h2>soy un encabezado</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias ad ratione maiores, quas soluta
-                deserunt beatae,
-                ab eaque, molestiae modi accusantium quam iusto numquam est? Quisquam eos officiis deserunt!</p>
-        </div>
+      <div class="caja img">
+        <img src="https://loremflickr.com/g/320/240/paris" height="200" />
+      </div>
+      <div class="caja text">
+        <h2>soy un encabezado</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias
+          ad ratione maiores, quas soluta deserunt beatae, ab eaque, molestiae
+          modi accusantium quam iusto numquam est? Quisquam eos officiis
+          deserunt!
+        </p>
+      </div>
     </main>
 
     <article class="articulo">
-        <h2>encabezado de articulos</h2>
-        <img src="https://loremflickr.com/g/320/240/paris" width="200">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis officia consequatur voluptate tenetur,
-            eius commodi adipisci fuga nam atque iure vel ratione dolores harum enim ut itaque cumque debitis!
-        </p><p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis, necessitatibus nobis alias
-            excepturi voluptatibus quae. Pariatur, vero odit blanditiis laudantium alias accusamus facilis tempora
-            necessitatibus id, natus nisi placeat.
-        </p>
+      <h2>encabezado de articulos</h2>
+      <img src="https://loremflickr.com/g/320/240/paris" width="200" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis
+        officia consequatur voluptate tenetur, eius commodi adipisci fuga nam
+        atque iure vel ratione dolores harum enim ut itaque cumque debitis!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+        perferendis, necessitatibus nobis alias excepturi voluptatibus quae.
+        Pariatur, vero odit blanditiis laudantium alias accusamus facilis
+        tempora necessitatibus id, natus nisi placeat.
+      </p>
     </article>
-</body>
-
+  </body>
 </html>
